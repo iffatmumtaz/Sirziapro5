@@ -85,7 +85,6 @@ if st.button("Register"):
     if username and password:
         if username in stored_data:
             st.warning("⚠️User already exists")
-        
         else:
             stored_data[username] = {
                 "password" : hash_password(password), # type: ignore
